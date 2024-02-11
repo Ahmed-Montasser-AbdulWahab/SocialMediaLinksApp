@@ -1,0 +1,34 @@
+﻿@model SocialMediaLinksApp.Models.Options.SocialMediaLinks
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Social Media Links</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <h1>
+        Social Media Links
+    </h1>
+    <div class="flex">
+        <div class="box w-50">
+            <a href=@(Model.Facebook) target="_blank">Facebook</a>
+        </div>
+        <div class="box w-50">
+            <a href=@(Model.Twitter) target="_blank">Twitter</a>
+        </div>
+        <div class="box w-50">
+            <a href=@(Model.Youtube) target="_blank">Youtube</a>
+        </div>
+        <environment exclude="Development">
+            <div class="box w-50">
+                <a href=@(Model.Instagram) target="_blank">Instagram</a>
+            </div>
+        </environment>
+
+
+
+    </div>
+</body>
+</html>
